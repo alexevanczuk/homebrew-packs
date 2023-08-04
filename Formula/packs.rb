@@ -4,11 +4,12 @@
 class Packs < Formula
   desc "Rust implementation of packwerk"
   homepage "https://github.com/alexevanczuk/packs"
-  url "https://github.com/alexevanczuk/packs/releases/download/v0.1.25/packs-mac.tar.gz"
-  sha256 "de3e9377ef407d94bc755d4dfa4a9f2678a8c632d81466e9948e5a7a175bec33"
-  version "0.1.25"
+  url "https://github.com/alexevanczuk/packs/releases/download/v0.1.66/packs-mac.tar.gz"
+  sha256 "9c1ebdd9c094e9e2b666ade2782d54e6d8e53e03f35d3b629f007947232e4fbe"
+  version "0.1.66"
 
   def install
-    bin.install "packs"
+    system "cp", "packs", "pks"
+    bin.install "packs", "pks"
   end
 end
